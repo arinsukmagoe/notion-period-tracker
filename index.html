@@ -1,67 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Cycle</title>
 
-<title>Bloom Cycle</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="card">
+<div class="widget">
 
-    <button class="settings" id="settings">
+    <button class="settings-btn" id="settingsBtn" aria-label="Settings">
         ⚙
     </button>
 
-    <div class="flower">🌸</div>
+    <div class="flower">
+        🌸
+    </div>
 
-    <h2>Bloom Cycle</h2>
+    <h1>Bloom Cycle</h1>
 
     <div class="countdown" id="countdown">
-        17 Days
+        --
     </div>
 
     <div class="subtitle">
         until next period
     </div>
 
-    <div class="next" id="nextDate">
-        Next • Aug 20
+    <div class="next-date" id="nextDate">
+        Set up your cycle
     </div>
 
 </div>
 
-<div class="overlay" id="overlay">
+
+<!-- Overlay -->
+<div class="overlay hidden" id="overlay">
 
     <div class="popup">
 
-        <h3>🌸 Bloom Cycle</h3>
+        <h2>🌸 Bloom Cycle</h2>
 
-        <label>Last Period</label>
-        <input type="date" id="lastPeriod">
+        <p class="popup-desc">
+            Personalize your cycle.
+        </p>
 
-        <label>Cycle Length</label>
-        <input
-            type="number"
-            id="cycleLength"
-            value="28"
-            min="21"
-            max="40">
+        <div class="field">
 
-        <div class="buttons">
+            <label>
+                Last Period
+            </label>
 
-            <button id="cancel">
+            <input
+                type="date"
+                id="lastPeriod">
+
+        </div>
+
+
+        <div class="field">
+
+            <label>
+                Cycle Length
+            </label>
+
+            <input
+                type="number"
+                id="cycleLength"
+                min="21"
+                max="40"
+                value="28">
+
+        </div>
+
+
+        <div class="button-group">
+
+            <button
+                id="cancelBtn"
+                class="secondary">
+
                 Cancel
+
             </button>
 
-            <button id="save">
+            <button
+                id="saveBtn"
+                class="primary">
+
                 Save
+
             </button>
 
         </div>
