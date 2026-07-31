@@ -1,18 +1,35 @@
-const card = document.getElementById("card");
+const settings = document.getElementById("settings");
+
 const overlay = document.getElementById("overlay");
+
 const cancel = document.getElementById("cancel");
 
-card.addEventListener("click", () => {
-    overlay.style.display = "flex";
-});
+const save = document.getElementById("save");
 
-cancel.addEventListener("click", () => {
-    overlay.style.display = "none";
-});
+settings.onclick = () => {
 
-// klik area gelap untuk menutup popup
-overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) {
-        overlay.style.display = "none";
-    }
-});
+overlay.style.display = "flex";
+
+}
+
+cancel.onclick = () => {
+
+overlay.style.display = "none";
+
+}
+
+overlay.onclick = (e)=>{
+
+if(e.target===overlay){
+
+overlay.style.display="none";
+
+}
+
+}
+
+save.onclick=()=>{
+
+overlay.style.display="none";
+
+}
