@@ -2,36 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom Cycle</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>Bloom Cycle</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div class="card" id="card">
+<div class="card">
+
+    <button class="settings" id="settings">
+        ⚙
+    </button>
 
     <div class="flower">🌸</div>
 
     <h2>Bloom Cycle</h2>
 
-    <div class="countdown">
+    <div class="countdown" id="countdown">
         17 Days
     </div>
 
-    <p class="subtitle">
+    <div class="subtitle">
         until next period
-    </p>
+    </div>
 
-    <div class="next">
+    <div class="next" id="nextDate">
         Next • Aug 20
     </div>
 
 </div>
 
-<!-- Popup -->
 <div class="overlay" id="overlay">
 
     <div class="popup">
@@ -42,11 +47,23 @@
         <input type="date" id="lastPeriod">
 
         <label>Cycle Length</label>
-        <input type="number" id="cycleLength" value="28">
+        <input
+            type="number"
+            id="cycleLength"
+            value="28"
+            min="21"
+            max="40">
 
         <div class="buttons">
-            <button id="cancel">Cancel</button>
-            <button id="save">Save</button>
+
+            <button id="cancel">
+                Cancel
+            </button>
+
+            <button id="save">
+                Save
+            </button>
+
         </div>
 
     </div>
@@ -56,5 +73,4 @@
 <script src="script.js"></script>
 
 </body>
-
 </html>
